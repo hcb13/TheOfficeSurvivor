@@ -17,9 +17,5 @@ public class PlayerAnimation : MonoBehaviour
 
         animator.SetBool("IsIdle", movementInput <= 0);
 
-        animator.SetBool("IsUp", value.ReadValue<Vector2>().y > 0);
-
-        animator.SetFloat("IsLeft", value.ReadValue<Vector2>().x);
-
     }
 }
