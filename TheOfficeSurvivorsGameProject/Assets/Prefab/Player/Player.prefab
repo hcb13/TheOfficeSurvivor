@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 4915602533854526213}
   - component: {fileID: 8688531277681734314}
   - component: {fileID: 6707398934230150166}
+  - component: {fileID: 6341000815549540196}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -232,3 +233,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   _rigidbody: {fileID: 2089636850395340137}
+--- !u!114 &6341000815549540196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7938864364410762308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30caa185879701b44a703aa282fd973b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  terrainChunks:
+  - {fileID: 6144764468782280113, guid: 6568f5bce576bd6428af32d7908f91c5, type: 3}
+  - {fileID: 6144764468782280113, guid: 7a43f1ebf76701d40bfa594710760183, type: 3}
+  - {fileID: 6144764468782280113, guid: 2491ecf739e93ee4da1663c31d66d5fe, type: 3}
+  player: {fileID: 7938864364410762308}
+  checkerRadius: 0.2
+  noTerrainPosition: {x: 0, y: 0, z: 0}
+  terrainMask:
+    serializedVersion: 2
+    m_Bits: 64
+  length: 20
