@@ -8,12 +8,15 @@ public class TestGrid : MonoBehaviour
 
     private Grid<bool> grid;
 
+    [SerializeField]
+    private GameObject player;
+
     private void Start()
     {
-        int width = 10;
-        int height = 10;
-        int cellSize = 1;
-        Vector2 originPosition = new Vector2(-5, -5);
+        int width = 3;
+        int height = 3;
+        int cellSize = 10;
+        Vector2 originPosition = new Vector2(-1.5f * cellSize, -1.5f * cellSize );
 
         grid = new Grid<bool>(width, height, cellSize, originPosition);
 
@@ -26,6 +29,23 @@ public class TestGrid : MonoBehaviour
             }
         }
 
+        Debug.DrawLine(grid.XYToWorldPosition(0, height), grid.XYToWorldPosition(width, height), Color.white, 100f);
+        Debug.DrawLine(grid.XYToWorldPosition(width, 0), grid.XYToWorldPosition(width, height), Color.white, 100f);
+    }
+
+
+    private void Update()
+    {
+        int x, y;
+        grid.WorldPositionToXY(player.transform.position, out x, out y);
+        Debug.Log("("+x+","+y+")");
+
+        //if (x == 0)
+        //{
+        //    x = 2;
+        //}
+
+        //player.transform.position = grid.XYToWorldPosition(x, y);
     }
 
 
