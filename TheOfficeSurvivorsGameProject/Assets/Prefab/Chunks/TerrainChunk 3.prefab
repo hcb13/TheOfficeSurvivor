@@ -506,7 +506,7 @@ GameObject:
   - component: {fileID: 6398841269747031028}
   - component: {fileID: 6144764468782280114}
   m_Layer: 6
-  m_Name: TerrainChunk
+  m_Name: TerrainChunk 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
