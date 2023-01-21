@@ -26,15 +26,27 @@ public class MapController : MonoBehaviour
         set { currentChunk = value; }
     }
 
+    private float x;
+    private float y;
+
     public void OnPlayerMovement(InputAction.CallbackContext value)
+    {
+        x = value.ReadValue<Vector2>().x;
+        y = value.ReadValue<Vector2>().y;
+        
+    }
+
+    private void FixedUpdate()
+    {
+        CheckSpawnChunk();
+    }
+
+    private void CheckSpawnChunk()
     {
         if (!currentChunk)
         {
             return;
         }
-
-        float x = value.ReadValue<Vector2>().x;
-        float y = value.ReadValue<Vector2>().y;
 
         if (x > 0 && y == 0)
         {
@@ -45,7 +57,8 @@ public class MapController : MonoBehaviour
                 noTerrainPosition = currentChunk.transform.Find("Right").position;
                 SpawnChunk();
             }
-        }else if(x < 0 && y == 0)
+        }
+        else if (x < 0 && y == 0)
         {
             // moving left
             if (!Physics2D.OverlapCircle(currentChunk.transform.Find("Left").position, checkerRadius, terrainMask))
@@ -54,7 +67,8 @@ public class MapController : MonoBehaviour
                 noTerrainPosition = currentChunk.transform.Find("Left").position;
                 SpawnChunk();
             }
-        }else if(y > 0 && x == 0)
+        }
+        else if (y > 0 && x == 0)
         {
             // moving up
             if (!Physics2D.OverlapCircle(currentChunk.transform.Find("Up").position, checkerRadius, terrainMask))
@@ -62,7 +76,8 @@ public class MapController : MonoBehaviour
                 noTerrainPosition = currentChunk.transform.Find("Up").position;
                 SpawnChunk();
             }
-        }else if(y < 0 && x == 0)
+        }
+        else if (y < 0 && x == 0)
         {
             //moving down
             if (!Physics2D.OverlapCircle(currentChunk.transform.Find("Down").position, checkerRadius, terrainMask))
@@ -70,7 +85,8 @@ public class MapController : MonoBehaviour
                 noTerrainPosition = currentChunk.transform.Find("Down").position;
                 SpawnChunk();
             }
-        }else if(x > 0 && y > 0)
+        }
+        else if (x > 0 && y > 0)
         {
             // moving right up
             if (!Physics2D.OverlapCircle(currentChunk.transform.Find("RightUp").position, checkerRadius, terrainMask))
@@ -106,7 +122,6 @@ public class MapController : MonoBehaviour
                 SpawnChunk();
             }
         }
-
     }
 
     private void SpawnChunk()
