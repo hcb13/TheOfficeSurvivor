@@ -147,13 +147,13 @@ public class MapController : MonoBehaviour
             }
         
         }else if (x > 0 && y > 0)
+        {
+            // moving right up
+            if (!Physics2D.OverlapCircle(currentChunk.transform.Find("RightUp").position, checkerRadius, terrainMask))
             {
-                // moving right up
-                if (!Physics2D.OverlapCircle(currentChunk.transform.Find("RightUp").position, checkerRadius, terrainMask))
-                {
-                    noTerrainPosition = currentChunk.transform.Find("RightUp").position;
-                    SpawnChunk();
-                }
+                noTerrainPosition = currentChunk.transform.Find("RightUp").position;
+                SpawnChunk();
+            }
 
         }else if (x > 0 && y < 0)
         {

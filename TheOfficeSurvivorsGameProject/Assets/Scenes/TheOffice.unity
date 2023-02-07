@@ -641,6 +641,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6341000815549540196, guid: d9809ea7aa01206439865d8d9013518d, type: 3}
+      propertyPath: terrainChunks.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6341000815549540196, guid: d9809ea7aa01206439865d8d9013518d, type: 3}
       propertyPath: optimizerCooldownDuration
       value: 1
       objectReference: {fileID: 0}
@@ -648,6 +652,18 @@ PrefabInstance:
       propertyPath: spawnedChunks.Array.data[0]
       value: 
       objectReference: {fileID: 741079728}
+    - target: {fileID: 6341000815549540196, guid: d9809ea7aa01206439865d8d9013518d, type: 3}
+      propertyPath: terrainChunks.Array.data[2]
+      value: 
+      objectReference: {fileID: 6144764468782280113, guid: ba912c374530e64459d8b0d9d27f08fa, type: 3}
+    - target: {fileID: 6341000815549540196, guid: d9809ea7aa01206439865d8d9013518d, type: 3}
+      propertyPath: terrainChunks.Array.data[3]
+      value: 
+      objectReference: {fileID: 6144764468782280113, guid: 2491ecf739e93ee4da1663c31d66d5fe, type: 3}
+    - target: {fileID: 6341000815549540196, guid: d9809ea7aa01206439865d8d9013518d, type: 3}
+      propertyPath: terrainChunks.Array.data[4]
+      value: 
+      objectReference: {fileID: 6144764468782280113, guid: db73de15560f0d741bf229210e7ab5bb, type: 3}
     - target: {fileID: 6707398934230150166, guid: d9809ea7aa01206439865d8d9013518d, type: 3}
       propertyPath: speed
       value: 1.5
